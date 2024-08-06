@@ -1,7 +1,13 @@
 package step;
 
+import java.util.Scanner;
+
 public class STEP01 {
-    public static void s1000() {
-        System.out.println("Hello World!!!!");
+    public void s1000() {
+        Scanner sc = new Scanner(System.in);
+        int a, b;
+        a = sc.nextInt();
+        b = sc.nextInt();
+        System.out.println(a + b);
     }
 }
