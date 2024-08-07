@@ -31,4 +31,35 @@ public class STEP01 {
         System.out.println(answer);
 
     }
+
+    /*
+        \    /\
+         )  ( ')
+        (  /  )
+         \(__)|
+    */
+    public static void no10171(String[] args) {
+
+        System.out.println("\\    /\\");
+        System.out.println(" )  ( ')");
+        System.out.println("(  /  )");
+        System.out.println(" \\(__)|");
+    }
+
+    /*
+        |\_/|
+        |q p|   /}
+        ( 0 )"""\
+        |"^"`    |
+        ||_/=\\__|
+    */
+    public static void main(String[] args) {
+
+        System.out.println("|\\_/|");
+        System.out.println("|q p|   /}");
+        System.out.println("( 0 )\"\"\"\\");
+        System.out.println("|\"^\"`    |");
+        System.out.println("||_/=\\\\__|");
+
+    }
 }
