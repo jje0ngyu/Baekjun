@@ -2,7 +2,7 @@ package step;
 
 import java.util.Scanner;
 
-public class STEP02 {
+public class Step02 {
 
     /*
     * BufferedReader 와 Scanner 의 차이
