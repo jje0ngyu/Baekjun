@@ -41,4 +41,46 @@ public class Step04 {
         }
         System.out.print(cnt);
     }
+
+    // No.25304
+    public static void shopping(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int X =  Integer.parseInt(br.readLine());   // 구매 합계
+        int N =  Integer.parseInt(br.readLine());   // 구매한 물건의 종류의 수 (반복 기준)
+
+
+        int total = 0;
+        for (int i = 0; i < N; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int cost = Integer.parseInt(st.nextToken()); // 금액
+            int cnt  = Integer.parseInt(st.nextToken()); // 수량
+
+            total += cost * cnt;
+
+        }
+
+        if (total == X) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+
+    // No.10871 - Time:416ms
+    public static void getSmallerX(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String[] sArr = br.readLine().split(" ");
+        int N =  Integer.parseInt(sArr[0]);
+        int X =  Integer.parseInt(sArr[1]);
+        String[] sNums = br.readLine().split(" ");
+        StringBuffer buffer = new StringBuffer();
+
+        for (int i = 0; i < N; i++) {
+            if (Integer.parseInt(sNums[i]) < X)   buffer.append(String.format(" %s",sNums[i]));
+        }
+
+        System.out.println(buffer.substring(1));
+    }
 }
