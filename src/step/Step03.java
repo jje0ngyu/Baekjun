@@ -39,4 +39,15 @@ public class Step03 {
             System.out.println(answer);
         }
     }
+
+    // No.25314
+    public static void repeatLong(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
+        sb.append("long ".repeat(Math.max(0, N / 4)));
+        sb.append("int");
+
+        System.out.println(sb);
+    }
 }
