@@ -40,4 +40,17 @@ public class Step02 {
             System.out.println("0");
         }
     }
+
+    public void getQuadrant() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int x = Integer.parseInt(br.readLine());
+        int y = Integer.parseInt(br.readLine());
+
+        if (y > 0) {
+            System.out.println(x > 0 ? "1" : "2");
+        } else {
+            System.out.println(x > 0 ? "4" : "3");
+        }
+    }
 }
