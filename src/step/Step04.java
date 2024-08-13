@@ -1,15 +1,15 @@
 package step;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+// 1차원 배열
 public class Step04 {
 
     // No.10807 A
-    public static void arrayA(String[] args) {
+    public void arrayA(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
@@ -27,7 +27,7 @@ public class Step04 {
     }
 
     // No.10807 B
-    public static void arrayB(String[] args) throws  IOException {
+    public void arrayB(String[] args) throws  IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -43,7 +43,7 @@ public class Step04 {
     }
 
     // No.25304
-    public static void shopping(String[] args) throws IOException {
+    public void shopping(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int X =  Integer.parseInt(br.readLine());   // 구매 합계
@@ -68,7 +68,7 @@ public class Step04 {
     }
 
     // No.10871 - Time:416ms
-    public static void getSmallerX(String[] args) throws IOException {
+    public void getSmallerX(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String[] sArr = br.readLine().split(" ");
@@ -82,5 +82,40 @@ public class Step04 {
         }
 
         System.out.println(buffer.substring(1));
+    }
+
+    // No.10818
+    public void getMinMax(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int N, min, max;
+        N = Integer.parseInt(br.readLine());
+
+        int[] nArr = new int[N];
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < N; i++) {
+            nArr[i] = Integer.parseInt(st.nextToken());
+
+        }
+
+        min = nArr[0];
+        max = nArr[0];
+
+        for(int i = 1; i < N; i++){
+            if(min > nArr[i]){
+                min = nArr[i];
+            }
+            if(max < nArr[i]){
+                max = nArr[i];
+            }
+        }
+//        Arrays.sort(nArr);
+//        bw.write(nArr[0] + " " + nArr[nArr.length - 1]);
+
+        bw.write(min + " " + max);
+        bw.flush();
+        bw.close();
     }
 }
